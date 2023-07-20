@@ -10,12 +10,18 @@ function contar(){
         let ini = Number(inicio.value)
         let fi = Number(fim.value)
         let pas = Number(passo.value)
+        if(pas <= 0){
+            window.alert('PASSO INVÁLIDO.CONSIDERANDO PASSO 1')
+            pas = 1
+        }
         if(ini < fi){
+            //CONTAGEM CRESCENTE    
         for (let c = ini; c <=fi ; c = c + pas){
             res.innerHTML += ` ${c} \u{1F449}	 ` // contrabarra e chaves são as modificações para javascript
         }
             res.innerHTML += `\u{1F3C1}` 
         } else {
+            //CONTAGEM REGRESSIVA   
             for(let c = ini; c >=fi; c -= pas){
                 res.innerHTML += ` ${c} \u{1F449}` 
             }
