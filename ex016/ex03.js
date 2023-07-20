@@ -10,8 +10,17 @@ function contar(){
         let ini = Number(inicio.value)
         let fi = Number(fim.value)
         let pas = Number(passo.value)
+        if(ini < fi){
         for (let c = ini; c <=fi ; c = c + pas){
-            res.innerHTML += ` ${c} `
+            res.innerHTML += ` ${c} \u{1F449}	 ` // contrabarra e chaves são as modificações para javascript
         }
+            res.innerHTML += `\u{1F3C1}` 
+        } else {
+            for(let c = ini; c >=fi; c -= pas){
+                res.innerHTML += ` ${c} \u{1F449}` 
+            }
+            res.innerHTML += `\u{1F3C1}` 
+        }
+       
     }
 }
