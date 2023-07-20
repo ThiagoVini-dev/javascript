@@ -6,7 +6,7 @@ function contar(){
     if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
         window.alert('IMPOSSÍVEL CONTAR')
     } else {
-        res.innerHTML = 'Contando...'
+        res.innerHTML = 'Contando... <br>'
         let ini = Number(inicio.value)
         let fi = Number(fim.value)
         let pas = Number(passo.value)
