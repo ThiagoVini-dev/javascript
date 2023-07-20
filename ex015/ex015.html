@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Teste de idade</h1></header>
+    <section>
+        <div id="entrada">
+            <p>Insira seu ano de nascimento:
+                <input type="number" name="txt" id="txtano" max="4">
+            </p>
+            <p>
+            <label for="masc"><input type="radio" name="radsex" id="masc" >Masculino</label>
+            <label for="fem"><input type="radio" name="radsex" id="fem" >Feminino</label>  <br>  
+            <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <p>Preencha os campos acima para ver o resultado</p>
+        <div id="res">
+           <!-- <img src="homemjovem1.png" alt="homem jovem" id="saida"> -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy;Curso em vídeo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
