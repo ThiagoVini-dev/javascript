@@ -53,5 +53,5 @@ function finalizar(){
         res.innerHTML += `<p>O menor valor informado foi ${menor} </p>`
         res.innerHTML += `<p>A soma dos valores é igual a ${soma}</p>`
         res.innerHTML += `<p>A média dos valores é igual a ${media}</p>`
-    }
+    } /*grupo de comandos para exibir os resultados abaixo do campo select*/
 }
