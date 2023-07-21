@@ -19,25 +19,25 @@ function inLista(n,l){// função para validar se o numero inserido já se encon
 function adicionar(){
     if (isNumero(num.value) && !inLista(num.value, valores)){ // se o numero estiver dentro das regras estabelecidas e não
     valores.push(Number(num.value))  // estiver na lista (como denotado pelo sinal !, que significa NÃO)
-    let item = document.createElement('option')
-    item.text = `Valor ${num.value} adicionado`
-    lista.appendChild(item)
+    let item = document.createElement('option')// criar opção visivel dentro do select no html 
+    item.text = `Valor ${num.value} adicionado`//inserir essa linha no texto da var item
+    lista.appendChild(item) // exibir item dentro da lista
     } else {
         window.alert('Valor inválido ou já encontrado na lista.')
     }
-    num.value = ''
-    num.focus()
+    num.value = '' // apos as condições, para limpar os dados previamente inseridos pelo usuário
+    num.focus() // metodo de limpeza
 }
 function finalizar(){
-    if (valores.length == 0){
+    if (valores.length == 0){//caso tamanho do vetor=0 alerta para inserir dados
         window.alert('Adicione valores antes de finalizar')
     } else {
-        let tot = valores.length
-        let maior = valores[0]
-        let menor = valores[0]
-        let soma = 0
-        let media = 0
-        for (let pos in valores){
+        let tot = valores.length // var recebe tamanho do vetor
+        let maior = valores[0] // ao iniciar, o primeiro valor é o maior valor
+        let menor = valores[0]// ao iniciar, o último valor é o menor valor
+        let soma = 0 // var soma recebe 0 para iniciar dentro do laço FOR
+        let media =0//var media recebe 0 para iniciar e,depois que soma passa pelo laço, recebe seu valor para calcular media
+        for (let pos in valores){ 
             soma += valores[pos]
         
             if (valores[pos] > maior){
